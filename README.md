@@ -1,0 +1,7 @@
+# Handler
+HandlerForSwift
+用Swift实现的Handler模型,方便直接的传递过程及消息.
+功能初步定义为可在多线程中传递消息的模型.
+当前分为两个Framework来支持Cocoa框架和Foundation框架,后续会维护为一个统一的框架集合
+<br>
+暂时不支持Pods导入
