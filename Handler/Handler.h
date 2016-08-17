@@ -16,5 +16,3 @@ FOUNDATION_EXPORT const unsigned char HandlerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Handler/PublicHeader.h>
 
-#import <Cocoa/Cocoa.h>
-

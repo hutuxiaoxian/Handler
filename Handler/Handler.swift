@@ -16,10 +16,9 @@ public class Handler: NSObject {
     private let handler : HandlerMessage;
     private let action : HandlerAction;
     
-    init(handlerMessage : HandlerMessage) {
+    public init(handlerMessage : HandlerMessage) {
         self.handler = handlerMessage;
         action = HandlerAction.init();
-        super.init();
     }
 
     public func sendMessage(msg : Message) {

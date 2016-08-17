@@ -8,19 +8,19 @@
 
 public class Message: NSObject {
 
-    var flag1 : Int?;
-    var flag2 : Int?;
-    var what : Int?;
+    public var flag1 : Int?;
+    public var flag2 : Int?;
+    public var what : Int?;
     
-    var isAsynchronous : Bool = false;
+    public var isAsynchronous : Bool = false;
     
     private var object : NSObject?;
     
-    func setData(data:NSObject) {
+    public func setData(data:NSObject) {
         self.object = data;
     }
     
-    func getData() -> NSObject? {
+    public func getData() -> NSObject? {
         return self.object;
     }
     

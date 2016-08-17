@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Handler_iOS.
 FOUNDATION_EXPORT double Handler_iOSVersionNumber;
@@ -15,5 +16,3 @@ FOUNDATION_EXPORT double Handler_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char Handler_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Handler_iOS/PublicHeader.h>
-
-#import <Foundation/Foundation.h>
