@@ -5,6 +5,7 @@
 //  Created by hutu on 16/8/15.
 //  Copyright © 2016年 hutu. All rights reserved.
 //
+import Cocoa
 
 public class Message: NSObject {
 

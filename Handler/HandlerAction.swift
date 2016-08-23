@@ -6,6 +6,7 @@
 //  Copyright © 2016年 hutu. All rights reserved.
 //
 
+import Cocoa
 
 class HandlerAction: NSObject {
 
@@ -13,15 +14,14 @@ class HandlerAction: NSObject {
     
     private var queue : dispatch_queue_t;
     
-    private var isAsync : Bool;
+    private var isAsync : Bool = true;
     
     override init() {
         queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-        self.isAsync = true;
     }
     
-    init(isAsync : Bool) {
-        queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    convenience init(isAsync : Bool) {
+        self.init();
         self.isAsync = isAsync;
     }
     
@@ -36,7 +36,6 @@ class HandlerAction: NSObject {
                     runnable;
                 });
             }
-            
             if (handler != nil && msg != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                     handler!.handleMessage(msg);
@@ -48,11 +47,10 @@ class HandlerAction: NSObject {
                     runnable;
                 }
                 if (handler != nil && msg != nil) {
-                    dispatch_async(dispatch_get_main_queue(), {
-                        handler!.handleMessage(msg);
-                    });
+                    handler!.handleMessage(msg);
                 }
             });
         }
     }
+
 }
